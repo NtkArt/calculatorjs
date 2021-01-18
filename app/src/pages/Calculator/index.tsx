@@ -20,7 +20,6 @@ const Calculator: React.FC = () => {
 
     switch (value) {
       case 'AC':
-        console.log('ac');
 
         resetAction();
         break;
