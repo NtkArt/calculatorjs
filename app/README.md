@@ -13,43 +13,6 @@ Future Feratures: Keyboard Listening.
 
 ---
 
-# Template React Typescript
-
-![Current Version](https://img.shields.io/badge/version-v0.1-red)
-![GitHub stars](https://img.shields.io/github/stars/NtkArt/react-typescript-template)
-![GitHub forks](https://img.shields.io/github/forks/NtkArt/react-typescript-template)
-![GitHub issues](https://img.shields.io/github/issues/NtkArt/react-typescript-template)
-
-A project template using create-react-app to quickly start developing react applications using typescript.
-
-## Table of Contents
-- [Getting Started](#getting-started)
-	- [Tools Required](#tools-required)
-	- [Installation](#installation)
-- [Authors](#authors)
-## Getting Started
-
-The project might have one branch: `master`. Which can be explained here
-
-* `master` contains aggregate code of all branches
-
-Other details that need to be given while starting out with the project can be provided in this section. A project structure like below can also be included for the big projects:
-
-```
-	app
-	├── README.md
-	├── package.json
-	├── .gitignore
-	├── public
-	│   ├── index.html
-	│   └── manifest.json
-	└── src
-		├── App.tsx
-		├── index.tsx
-		└── react-app-env.d.ts
-		└── setupTests.ts
-```
---- 
 ### Tools Required
 
 All tools required go here. You would require the following tools to develop and run the project:
