@@ -1,14 +1,14 @@
-export const checkLastAction: any = (expression: any) => {
+export const checkLastAction: boolean | unknown = (expression: string) => {
   const actions = /[+/\-x*.]$/;
 
   return actions.test(expression);
 };
 
-export const checkZeroDigit: any = (expression: any) => expression === '0';
+export const checkZeroDigit: boolean | unknown = (expression: string) => expression === '0';
 
-export const isDot: any = (expression: any) => expression === '.';
+export const isDot: boolean | unknown = (expression: string) => expression === '.';
 
-export const isNumber: any = (value: any) => {
+export const isNumber: boolean | unknown = (value: string) => {
   const numbers = /[0-9]/;
 
   return numbers.test(value);
