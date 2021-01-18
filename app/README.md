@@ -1,5 +1,6 @@
-# Template React Typescript
-Template to fast start development of react with typescript.
+# CalculatorJS
+
+Simple calculator built in Typescript ReactJS.
 
 ### Requirements
 
@@ -7,6 +8,10 @@ Template to fast start development of react with typescript.
 - yarn (**LTS** preferably)
 - [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint "Eslint") extension
 --- 
+
+Future Feratures: Keyboard Listening.
+
+---
 
 # Template React Typescript
 
