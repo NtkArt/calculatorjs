@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import {
-  Button, Container, Title, CalcScreen, Wrapper, Layer,
-} from './styles';
+import { Button, Container, Title, CalcScreen, Wrapper, Layer } from './styles';
 import {
   changeLastElement,
   checkLastAction,
   checkZeroDigit,
+  deleteElement,
   isDot,
   isNumber,
-  deleteElement,
 } from '../../utils/util';
 
 const Calculator: React.FC = () => {
@@ -20,7 +18,6 @@ const Calculator: React.FC = () => {
 
     switch (value) {
       case 'AC':
-
         resetAction();
         break;
       case '=':
@@ -35,42 +32,42 @@ const Calculator: React.FC = () => {
   function othersActions(value: any) {
     if (checkLastAction(value)) {
       if (isDot(value)) {
-        setCount((counter) => counter + 1);
+        setCount(counter => counter + 1);
 
         if (count < 1) {
-          setResult((res) => res + value);
+          setResult(res => res + value);
         }
       } else {
         setCount(0);
 
         if (checkLastAction(result)) {
           if (value === '-' && result[result.length - 1] !== value) {
-            setResult((res) => res + value);
+            setResult(res => res + value);
           } else if (
-            value !== '-'
-            && result[result.length - 1] === '-'
-            && !isNumber(result[result.length - 2])
+            value !== '-' &&
+            result[result.length - 1] === '-' &&
+            !isNumber(result[result.length - 2])
           ) {
-            setResult((res) => deleteElement(res, 2));
-            setResult((res) => res + value);
+            setResult(res => deleteElement(res, 2));
+            setResult(res => res + value);
           } else if (value !== '-') {
-            setResult((res) => changeLastElement(res, value, 1));
+            setResult(res => changeLastElement(res, value, 1));
           }
         } else {
-          setResult((res) => res + value);
+          setResult(res => res + value);
         }
       }
     } else if (checkZeroDigit(result)) {
       setResult(value);
     } else {
-      setResult((res) => res + value);
+      setResult(res => res + value);
     }
   }
   function equalAction() {
     if (checkLastAction(result)) {
-      setResult((res) => deleteElement(res, 1));
+      setResult(res => deleteElement(res, 1));
     } else {
-      setResult((res) => eval(res).toString());
+      setResult(res => eval(res).toString());
 
       if (eval(result) % 1 === 0) {
         setCount(0);
